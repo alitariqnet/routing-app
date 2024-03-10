@@ -8,6 +8,7 @@ import { SecondComponent } from './second/second.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ChildAComponent } from './child-a/child-a.component';
 import { ChildBComponent } from './child-b/child-b.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ChildBComponent } from './child-b/child-b.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppRoutingModule 
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

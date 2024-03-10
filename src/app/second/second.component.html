@@ -2,9 +2,20 @@
 <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
 <nav>
     <ul>
-      <li><a routerLink="/first-component" routerLinkActive="active">First Component</a></li>
+      <li><span>Go back to </span><a routerLink="/first-component" routerLinkActive="active">First Component</a></li>
+        <div>Current User: {{currentUser}}</div>
+        <div>Component Title: {{title}}</div>
+        <div>Response is {{response}}</div>
+        <!-- "The sum of 1 + 1 is 2" -->
+        <p>The sum of 1 + 1 is {{1 + 1}}.</p>
+        <!-- "The sum of 1 + 1 is not 4" -->
+        <p>The sum of 1 + 1 is not {{1 + 1 + getValue()}}.</p>
 
     </ul>
+    <ul>
+        <li *ngFor="let customer of customers">{{customer.name}}</li>
+      </ul>
+      <button type="button" (click)="deleteHero()">Delete hero</button>
   </nav>
   <!-- The routed views render in the <router-outlet>-->
   <router-outlet></router-outlet>
